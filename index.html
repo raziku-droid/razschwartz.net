@@ -40,7 +40,6 @@
       --shadow: 0 20px 50px -24px rgb(40 36 90 / 0.28);
       --wrap: 1200px;
       --gutter: clamp(20px, 5vw, 64px);
-      --ease: cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     @media (prefers-color-scheme: dark) {
@@ -57,9 +56,6 @@
         --shadow: 0 20px 50px -24px rgb(0 0 0 / 0.6);
       }
     }
-
-    html { scroll-behavior: smooth; }
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
     body {
       font-family: 'Geist', system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -102,13 +98,12 @@
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
       border-bottom: 1px solid transparent;
-      transition: border-color 0.3s;
     }
     .nav.scrolled { border-bottom-color: var(--line); }
     .nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
     .nav-name { font-weight: 600; font-size: 15px; text-decoration: none; letter-spacing: -0.01em; }
     .nav-links { display: flex; gap: clamp(14px, 3vw, 40px); list-style: none; }
-    .nav-links a { font-size: 14px; color: var(--ink-2); text-decoration: none; transition: color 0.2s; }
+    .nav-links a { font-size: 14px; color: var(--ink-2); text-decoration: none; }
     .nav-links a:hover { color: var(--accent); }
 
     /* BUTTONS: all pill-shaped. Images and panels use --radius. */
@@ -119,9 +114,7 @@
       border-radius: 999px;
       text-decoration: none;
       white-space: nowrap;
-      transition: transform 0.2s var(--ease), background 0.2s, border-color 0.2s, color 0.2s;
     }
-    .btn:active { transform: translateY(1px) scale(0.98); }
     .btn-primary { background: var(--accent); color: var(--accent-ink); }
     .btn-primary:hover { background: color-mix(in srgb, var(--accent) 88%, var(--ink)); }
     .btn-ghost { border: 1px solid var(--line); color: var(--ink); background: var(--surface); }
@@ -182,7 +175,6 @@
       border: 1px solid var(--line);
       border-radius: 999px;
       background: var(--surface);
-      transition: border-color 0.2s, color 0.2s;
     }
     .link-pill:hover { border-color: var(--accent); color: var(--accent); }
 
@@ -216,8 +208,7 @@
     .essay h3 { font-size: clamp(24px, 2.6vw, 34px); font-weight: 600; letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 16px; }
     .essay p { color: var(--ink-2); max-width: 58ch; flex: 1; }
     .essay-link { margin-top: 22px; display: inline-flex; align-items: center; gap: 6px; font-weight: 500; color: var(--accent); text-decoration: none; }
-    .essay-link .icon { transition: transform 0.25s var(--ease); }
-    .essay-link:hover .icon { transform: translate(2px, -2px); }
+    .essay-link .icon { }
     .essay-status { margin-top: 22px; font-size: 14px; color: var(--muted); }
 
     /* ABOUT */
@@ -254,12 +245,6 @@
     footer { border-top: 1px solid var(--line); padding: 28px 0; }
     footer .wrap { display: flex; justify-content: space-between; gap: 16px; font-size: 13px; color: var(--muted); }
 
-    /* REVEAL: only hides content when JS runs and motion is allowed. */
-    @media (prefers-reduced-motion: no-preference) {
-      .js .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); transition-delay: calc(var(--i, 0) * 80ms); }
-      .js .reveal.in { opacity: 1; transform: none; }
-    }
-
     /* RESPONSIVE: everything collapses to one column under 860px. */
     @media (max-width: 860px) {
       .hero .wrap { grid-template-columns: 1fr; }
@@ -280,7 +265,6 @@
   </style>
 </head>
 <body>
-  <script>document.documentElement.classList.add('js');</script>
 
   <nav class="nav" aria-label="Main">
     <div class="wrap">
@@ -300,10 +284,10 @@
     <header class="hero">
       <div class="wrap">
         <div>
-          <p class="hero-role reveal">Product Design &amp; Research Leader</p>
-          <h1 class="reveal" style="--i:1">I build and scale design teams that innovate, stay curious, and drive real impact.</h1>
-          <p class="hero-sub reveal" style="--i:2">At Spotify, Meta/Oculus and Welltech I led product strategy and partnered with CPOs, CEOs and executive peers to shape what gets built, and why.</p>
-          <div class="hero-actions reveal" style="--i:3">
+          <p class="hero-role">Product Design &amp; Research Leader</p>
+          <h1>I build and scale design teams that innovate, stay curious, and drive real impact.</h1>
+          <p class="hero-sub">At Spotify, Meta/Oculus and Welltech I led product strategy and partnered with CPOs, CEOs and executive peers to shape what gets built, and why.</p>
+          <div class="hero-actions">
             <a href="#work" class="btn btn-primary">View work</a>
             <a href="#contact" class="btn btn-ghost">Get in touch</a>
           </div>
@@ -317,7 +301,7 @@
     <!-- WORK -->
     <section id="work">
       <div class="wrap">
-        <h2 class="section-title reveal">Selected work</h2>
+        <h2 class="section-title">Selected work</h2>
 
         <!-- Welltech -->
         <article class="case case-featured">
@@ -333,7 +317,7 @@
             </div>
           </div>
         </article>
-        <div class="outcomes reveal">
+        <div class="outcomes">
           <div>
             <div class="outcome-num">$5m to $12m</div>
             <div class="outcome-label">Monthly EPAM growth after the core product redesign</div>
@@ -349,7 +333,7 @@
         </div>
 
         <!-- Spotify pair -->
-        <p class="pair-label reveal">Spotify, 2020-2023</p>
+        <p class="pair-label">Spotify, 2020-2023</p>
         <div class="case-pair">
           <article class="case">
             <div class="case-img">
@@ -398,15 +382,15 @@
     <!-- THINKING -->
     <section id="thinking">
       <div class="wrap">
-        <h2 class="section-title reveal">Thinking</h2>
+        <h2 class="section-title">Thinking</h2>
         <div class="writing">
-          <article class="essay reveal">
+          <article class="essay">
             <p class="essay-pub">Book, coming soon</p>
             <h3>Design for Failure</h3>
             <p>Most design frameworks celebrate the "happy path", the seamless, idealised journey where users make no mistakes. But real life rarely works that way. This book argues that failure is not just inevitable but essential to good design. By learning from failure, predicting it, and designing for it, we build products that are more resilient, more empathetic, and ultimately more successful.</p>
             <p class="essay-status">In progress</p>
           </article>
-          <article class="essay reveal" style="--i:1">
+          <article class="essay">
             <p class="essay-pub">Spotify Insights, 2021</p>
             <h3>4 myths about tactical research</h3>
             <p>The tactical/strategic split in UX research is a false dichotomy and believing it limits the impact of the work. A case for why tactical research, done right, is some of the most powerful work a researcher can do.</p>
@@ -419,15 +403,15 @@
     <!-- ABOUT -->
     <section id="about">
       <div class="wrap">
-        <h2 class="section-title reveal">About</h2>
-        <p class="about-lead reveal">Good design isn't decoration. It's the earliest form of product thinking.</p>
+        <h2 class="section-title">About</h2>
+        <p class="about-lead">Good design isn't decoration. It's the earliest form of product thinking.</p>
         <div class="about-grid">
-          <div class="about-bio reveal">
+          <div class="about-bio">
             <p>The best designed products I've been part of started not with a brief, but with a question: what does this person actually need, and why?</p>
             <p>I've spent my career building and scaling multidisciplinary design, research and writing teams (40+ people at Welltech, 10+ at Spotify and Meta), working directly with CPOs, CEOs and boards to shape product direction from the earliest stages.</p>
             <p>My background is in Human-Computer Interaction research, which shapes how I lead: hypothesis-driven, evidence-grounded, with a high bar for craft and a clear view of what good looks like. I've built design systems, led monetisation and paywall design, driven subscription product strategy, and navigated global expansion across regulated markets. I'm now thinking carefully, and practically, about what AI means for design practice, for research, and for the organisations doing this work.</p>
           </div>
-          <dl class="facts reveal" style="--i:1">
+          <dl class="facts">
             <div><dt>Based in</dt><dd>London</dd></div>
             <div><dt>Open to</dt><dd>VP &amp; Senior Design Director roles</dd></div>
             <div><dt>Excited about</dt><dd>AI &amp; product innovation</dd></div>
@@ -435,7 +419,7 @@
           </dl>
         </div>
 
-        <div class="timeline reveal">
+        <div class="timeline">
           <h3>Experience</h3>
           <div class="tl-row"><span class="tl-year">2023-2026</span><span class="tl-role">Senior Director, Design, Research &amp; Writing <span class="tl-org">at Welltech</span></span></div>
           <div class="tl-row"><span class="tl-year">2020-2023</span><span class="tl-role">Head of New Product Innovation Design &amp; Research <span class="tl-org">at Spotify</span></span></div>
@@ -452,9 +436,9 @@
     <!-- CONTACT -->
     <section id="contact" class="contact">
       <div class="wrap">
-        <h2 class="reveal">Get in touch</h2>
-        <p class="reveal" style="--i:1">Open to VP and Senior Design Director roles. Email is the fastest way to reach me.</p>
-        <div class="contact-actions reveal" style="--i:2">
+        <h2>Get in touch</h2>
+        <p>Open to VP and Senior Design Director roles. Email is the fastest way to reach me.</p>
+        <div class="contact-actions">
           <a href="mailto:raz@razschwartz.net" class="btn btn-primary"><span class="icon i-envelope" aria-hidden="true"></span>raz@razschwartz.net</a>
           <a href="https://linkedin.com/in/raz-schwartz" target="_blank" rel="noopener" class="btn btn-ghost"><span class="icon i-linkedin" aria-hidden="true"></span>LinkedIn</a>
         </div>
@@ -471,14 +455,6 @@
   </footer>
 
   <script>
-    // Reveal sections as they enter the viewport (CSS skips this under reduced motion).
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
-
     // Hairline under the nav once the page has scrolled.
     var nav = document.querySelector('.nav');
     new IntersectionObserver(function (entries) {
