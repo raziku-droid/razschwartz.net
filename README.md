@@ -11,6 +11,8 @@ Personal site of Raz Schwartz. Plain HTML, no build step, hosted on Netlify.
 | `me.jpeg` | Profile photo |
 | `lossless.jpg`, `wrapped.jpg`, `oculusgo.jpg`, `return2.jpg` | Work section images |
 | `favicon.ico` | Browser tab icon |
+| `assets/fonts/` | Geist, self-hosted |
+| `assets/icons/` | Phosphor icons (official SVGs) |
 | `netlify.toml` | Netlify settings (no build step, publish the repo root) |
 
 ## Updating the site
