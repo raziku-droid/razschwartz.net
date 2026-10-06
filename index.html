@@ -201,11 +201,10 @@
     .outcome-num { font-size: clamp(28px, 3vw, 40px); font-weight: 600; letter-spacing: -0.03em; line-height: 1.1; color: var(--accent); font-variant-numeric: tabular-nums; }
     .outcome-label { font-size: 14px; color: var(--ink-2); margin-top: 6px; }
 
-    /* Pair: asymmetric widths, second column offset down. */
-    .case-pair { display: grid; grid-template-columns: 6fr 5fr; gap: clamp(28px, 4vw, 64px); align-items: start; margin-bottom: clamp(80px, 10vw, 128px); }
+    /* Pair: two projects from one role, aligned under a shared label. */
+    .pair-label { font-size: 14px; font-weight: 600; color: var(--accent); margin-bottom: 20px; }
+    .case-pair { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 4vw, 56px); align-items: start; margin-bottom: clamp(80px, 10vw, 128px); }
     .case-pair .case-img { aspect-ratio: 16 / 10; margin-bottom: 28px; }
-    .case-pair .case:nth-child(2) { margin-top: clamp(0px, 8vw, 120px); }
-    .case-pair .case:nth-child(2) .case-img { aspect-ratio: 4 / 3; }
 
     /* Closing case: text left, image right. */
     .case-split { display: grid; grid-template-columns: 5fr 7fr; gap: clamp(28px, 4vw, 56px); align-items: center; }
@@ -272,7 +271,6 @@
       .hero .wrap { gap: 28px; }
       .hero-photo { width: 120px; aspect-ratio: 1; order: -1; }
       .case-featured, .case-pair, .case-split, .writing, .about-grid { grid-template-columns: 1fr; }
-      .case-pair .case:nth-child(2) { margin-top: 0; }
       .case-split .case-img { order: -1; }
       .case-featured .case-img, .case-split .case-img { margin-bottom: 4px; }
       .outcomes { grid-template-columns: 1fr; gap: 18px; }
@@ -355,12 +353,13 @@
         </div>
 
         <!-- Spotify pair -->
+        <p class="pair-label reveal">Spotify, 2020-2023</p>
         <div class="case-pair">
           <article class="case reveal">
             <div class="case-img">
               <img src="wrapped.jpg" alt="Spotify Wrapped" width="1920" height="1080" loading="lazy">
             </div>
-            <p class="case-meta"><strong>Spotify</strong><span>Subscription growth, cultural impact</span></p>
+            <p class="case-meta"><span>Subscription growth, cultural impact</span></p>
             <h3>Spotify Wrapped</h3>
             <p class="desc">Co-led the product team that shipped Wrapped, Spotify's long-term retention and brand investment effort. Directed and grew the cross-functional team that designed, researched and shipped this global cultural moment. It reached <b>400M+ users across 180+ markets</b> and drove a <b>21% spike in app downloads</b> on launch day, and inspired Apple Music, YouTube Music and Deezer to launch equivalent features.</p>
             <div class="links">
@@ -372,7 +371,7 @@
             <div class="case-img">
               <img src="lossless.jpg" alt="Spotify Lossless" width="1920" height="1080" loading="lazy">
             </div>
-            <p class="case-meta"><strong>Spotify</strong><span>0→1 product, cross-company strategy</span></p>
+            <p class="case-meta"><span>0→1 product, cross-company strategy</span></p>
             <h3>Lossless audio streaming</h3>
             <p class="desc">Led the strategic effort to bring lossless audio to Spotify, a product that required <b>aligning stakeholders across product, engineering, marketing and the executive team</b> around a shared definition of what "quality" actually means to listeners. Built and led the team from early research through to launch, translating a complex technical capability into an elevated product experience.</p>
             <div class="links">
