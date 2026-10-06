@@ -2,3 +2,10 @@
 [build]
   publish = "."
   command = ""
+
+# Keep repo docs off the public site.
+[[redirects]]
+  from = "/README.md"
+  to = "/404"
+  status = 404
+  force = true
