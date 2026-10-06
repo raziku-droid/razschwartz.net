@@ -171,8 +171,7 @@
     .case h3 { font-size: clamp(24px, 2.4vw, 32px); font-weight: 600; letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 16px; }
     .case p.desc { font-size: 16px; color: var(--ink-2); line-height: 1.7; max-width: 62ch; }
     .case-img { border-radius: var(--radius); overflow: hidden; background: var(--surface); }
-    .case-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s var(--ease); }
-    .case:hover .case-img img { transform: scale(1.025); }
+    .case-img img { width: 100%; height: 100%; object-fit: cover; }
     .links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
     .link-pill {
       display: inline-flex; align-items: center; gap: 6px;
@@ -260,9 +259,6 @@
       .js .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); transition-delay: calc(var(--i, 0) * 80ms); }
       .js .reveal.in { opacity: 1; transform: none; }
     }
-    @media (prefers-reduced-motion: reduce) {
-      .case:hover .case-img img { transform: none; }
-    }
 
     /* RESPONSIVE: everything collapses to one column under 860px. */
     @media (max-width: 860px) {
@@ -312,7 +308,7 @@
             <a href="#contact" class="btn btn-ghost">Get in touch</a>
           </div>
         </div>
-        <div class="hero-photo reveal" style="--i:2">
+        <div class="hero-photo">
           <img src="me.jpeg" alt="Raz Schwartz outdoors on a mountain trail" width="512" height="512" fetchpriority="high">
         </div>
       </div>
@@ -324,7 +320,7 @@
         <h2 class="section-title reveal">Selected work</h2>
 
         <!-- Welltech -->
-        <article class="case case-featured reveal">
+        <article class="case case-featured">
           <div class="case-img">
             <img src="return2.jpg" alt="Welltech's Return AI app shown on four phones" width="1920" height="1153" loading="lazy">
           </div>
@@ -355,7 +351,7 @@
         <!-- Spotify pair -->
         <p class="pair-label reveal">Spotify, 2020-2023</p>
         <div class="case-pair">
-          <article class="case reveal">
+          <article class="case">
             <div class="case-img">
               <img src="wrapped.jpg" alt="Spotify Wrapped" width="1920" height="1080" loading="lazy">
             </div>
@@ -367,7 +363,7 @@
             </div>
           </article>
 
-          <article class="case reveal" style="--i:1">
+          <article class="case">
             <div class="case-img">
               <img src="lossless.jpg" alt="Spotify Lossless" width="1920" height="1080" loading="lazy">
             </div>
@@ -382,7 +378,7 @@
         </div>
 
         <!-- Oculus -->
-        <article class="case case-split reveal">
+        <article class="case case-split">
           <div class="case-img">
             <img src="oculusgo.jpg" alt="Oculus Go headset" width="1920" height="1000" loading="lazy">
           </div>

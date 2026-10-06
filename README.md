@@ -7,7 +7,8 @@ Personal site of Raz Schwartz. Plain HTML, no build step, hosted on Netlify.
 | File | What it is |
 |------|------------|
 | `index.html` | The whole site: content, styles, and layout |
-| `Raz_Schwartz_CV.pdf` | CV linked from the site; replace the file to update it |
+| `Raz_Schwartz_CV.pdf` | CV linked from the site, built from `cv/cv.html` |
+| `cv/` | CV source (`cv.html`) and the script that turns it into the PDF |
 | `me.jpeg` | Profile photo |
 | `lossless.jpg`, `wrapped.jpg`, `oculusgo.jpg`, `return2.jpg` | Work section images |
 | `favicon.ico` | Browser tab icon |
@@ -24,3 +25,10 @@ Once Netlify is linked to this repo, every push to `main` goes live in about 30 
 - **Locally:** run `python3 -m http.server 8000` in this folder, open http://localhost:8000, then commit and push.
 
 Pushes to any other branch, or pull requests, get their own Netlify preview URL before going live.
+
+## Updating the CV
+
+Edit `cv/cv.html`, then rebuild the PDF with either:
+
+- `node cv/build.js` (needs Playwright: `npm i -g playwright`), or
+- open `cv/cv.html` in Chrome, Print, Save as PDF, with "Background graphics" on, saved over `Raz_Schwartz_CV.pdf`.
