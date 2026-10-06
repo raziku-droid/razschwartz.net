@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Raz Schwartz - CV (LEGO Digital Play)</title>
+<!-- Source for Raz_Schwartz_CV.pdf. Edit this file, then rebuild the PDF (see README). -->
+<style>
+  @font-face {
+    font-family: 'Geist';
+    src: url('../assets/fonts/geist-latin-wght-normal.woff2') format('woff2-variations');
+    font-weight: 100 900;
+  }
+  @page { size: A4; margin: 12mm 14mm 11mm; }
+
+  :root {
+    --ink: #16161d;
+    --ink-2: #474754;
+    --muted: #676774;
+    --line: #e2e2e8;
+    --accent: #5245d1;
+    --accent-soft: #ecebfb;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Geist', system-ui, sans-serif;
+    color: var(--ink-2);
+    font-size: 8.7pt;
+    line-height: 1.42;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  b { color: var(--ink); font-weight: 600; }
+  a { color: inherit; text-decoration: none; }
+
+  /* Header */
+  header { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 24px; padding-bottom: 10px; border-bottom: 1.5px solid var(--ink); margin-bottom: 12px; }
+  h1 { font-size: 23pt; font-weight: 600; letter-spacing: -0.035em; line-height: 1; color: var(--ink); margin-bottom: 6px; }
+  .role { font-size: 10.5pt; font-weight: 500; color: var(--accent); }
+  .contact { text-align: right; font-size: 8.4pt; line-height: 1.5; }
+
+  .profile { font-size: 9.5pt; line-height: 1.5; color: var(--ink); margin-bottom: 14px; max-width: 165mm; }
+
+  /* Body: main column + sidebar */
+  .cols { display: grid; grid-template-columns: 1fr 52mm; gap: 9mm; }
+
+  h2 { font-size: 8.4pt; font-weight: 600; color: var(--accent); letter-spacing: 0.02em; margin-bottom: 7px; padding-bottom: 4px; border-bottom: 1px solid var(--line); }
+  section + section { margin-top: 12px; }
+
+  .job { margin-bottom: 10px; }
+  .job-head, .job-org { break-after: avoid; }
+  .job-head { display: grid; grid-template-columns: 1fr auto; gap: 12px; align-items: baseline; }
+  .job-title { font-size: 10pt; font-weight: 600; color: var(--ink); letter-spacing: -0.01em; line-height: 1.3; }
+  .job-dates { font-size: 8.6pt; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .job-org { font-size: 9pt; font-weight: 500; color: var(--accent); margin: 0 0 4px; }
+  ul { list-style: none; }
+  li { position: relative; padding-left: 11px; margin-bottom: 2.5px; break-inside: avoid; }
+  li::before { content: ''; position: absolute; left: 0; top: 0.62em; width: 4px; height: 1.5px; background: var(--accent); }
+
+  /* Sidebar */
+  aside section + section { margin-top: 13px; }
+  .skills { display: flex; flex-wrap: wrap; gap: 4px; }
+  .skills span { font-size: 7.9pt; color: var(--ink); background: var(--accent-soft); border-radius: 999px; padding: 2px 8px; }
+  .edu { margin-bottom: 6px; }
+  .edu b { display: block; font-size: 9pt; }
+  .edu span { display: block; font-size: 8.6pt; }
+  .edu .yr { color: var(--muted); font-variant-numeric: tabular-nums; }
+  aside p { font-size: 8.8pt; }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>Raz Schwartz</h1>
+    <p class="role">Product, Design &amp; Research Leader</p>
+  </div>
+  <div class="contact">
+    <a href="mailto:raz@razschwartz.net">raz@razschwartz.net</a><br>
+    <a href="https://linkedin.com/in/raz-schwartz">linkedin.com/in/raz-schwartz</a><br>
+    <a href="https://razschwartz.net">razschwartz.net</a><br>
+    London, UK
+  </div>
+</header>
+
+<p class="profile">Product and design leader with a PhD in Human-Computer Interaction, specialising in tools that let people create, and the worlds they build with them. At Meta/Oculus I worked on Horizon's world-building and creation tools and avatars, and shipped social VR spaces from the ground up. At Spotify I led new product innovation, taking ideas from prototype to launch through a rolling concept-testing programme. At Welltech I built a 40+ person design, research and writing organisation from scratch. I use structured user testing to de-risk concepts early, and measure success by what people make and whether they keep coming back.</p>
+
+<div class="cols">
+  <main>
+    <section>
+      <h2>Experience</h2>
+
+      <div class="job">
+        <div class="job-head"><span class="job-title">Senior Director, Design, Research &amp; Writing</span><span class="job-dates">2023-2026</span></div>
+        <p class="job-org">Welltech</p>
+        <ul>
+          <li>Built and led a <b>40+ person</b> multidisciplinary team across design, UXR, content and writing</li>
+          <li>Launched Return, an AI-driven wellness app achieving <b>+13% higher retention</b></li>
+          <li>Redesigned core app experience driving <b>+7% first-time usage</b> and <b>−11% churn</b></li>
+          <li>Led global expansion across LatAm and European regulated markets</li>
+          <li>Drove monetisation, paywall and subscription design strategy across B2C health portfolio</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head"><span class="job-title">Head of New Product Innovation Design &amp; Research</span><span class="job-dates">2020-2023</span></div>
+        <p class="job-org">Spotify</p>
+        <ul>
+          <li>Led <b>10+ person</b> cross-disciplinary team across design, research and data science</li>
+          <li>Delivered Spotify Wrapped, reaching <b>400M+ users across 180+ markets</b>; drove a <b>21% spike in app downloads</b> on launch day and <b>14% DAU uplift</b>; inspired competitors including Apple Music, YouTube Music and Deezer to launch equivalent features</li>
+          <li>Launched HiFi Lossless audio tier from zero to launch, delivering lossless quality to Spotify Premium subscribers</li>
+          <li>Shipped Spotify Karaoke as an Innovation Lab experiment for Premium members</li>
+          <li>Launched AI Playlist, an early AI-driven personalisation product allowing users to generate playlists from natural language prompts</li>
+          <li>Built a rolling concept testing and innovation research programme that accelerated the team's ability to validate and pivot ideas</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head"><span class="job-title">UX Manager, AR/VR</span><span class="job-dates">2014-2020</span></div>
+        <p class="job-org">Meta / Oculus</p>
+        <ul>
+          <li>Worked on <b>Horizon's world-building and creation tools</b> and on <b>avatars</b>, shaping how people create, customise and share immersive interactive worlds</li>
+          <li>Early design and research leader on the Oculus team, helping establish UX frameworks and design principles for Meta's social VR platform</li>
+          <li>Led design and insights for <b>Oculus Go</b>, winner of <b>Best Product at CES</b>; <b>over 2 million units sold</b> within a year of launch</li>
+          <li>Drove software design and insights for <b>Oculus Quest</b>, Meta's first 6DOF headset; the Quest platform went on to sell <b>over 20 million units</b> cumulatively</li>
+          <li>Shipped <b>Oculus Rooms</b>: social VR spaces allowing friends to watch media and hang out together in virtual environments</li>
+          <li>Shipped <b>Oculus Venues</b>: live streaming of concerts and sports events in VR, giving users the feeling of being in the audience</li>
+          <li>Shipped <b>Horizon Workrooms</b>, a collaborative VR workspace for remote teams; featured in Wall Street Journal and Wired as a defining moment in the future of remote work</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <aside>
+    <section>
+      <h2>Skills</h2>
+      <div class="skills">
+        <span>Product strategy &amp; roadmaps</span>
+        <span>C-Suite product leadership</span>
+        <span>Design team leadership</span>
+        <span>UX research leadership</span>
+        <span>AI product design</span>
+        <span>Design systems</span>
+        <span>Creator &amp; world-building tools</span>
+        <span>Playtesting &amp; concept validation</span>
+        <span>Prototyping &amp; 0→1 products</span>
+        <span>Monetisation &amp; paywalls</span>
+        <span>AR/VR innovation</span>
+        <span>Hiring &amp; coaching</span>
+        <span>Global expansion</span>
+        <span>Health &amp; behaviour change</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class="edu"><b>Postdoctoral Researcher</b><span>Cornell Tech</span><span class="yr">2012-2014</span></div>
+      <div class="edu"><b>PhD, Human-Computer Interaction</b><span>Carnegie Mellon University</span><span class="yr">2008-2012</span></div>
+      <div class="edu"><b>MA Law, BA Economics</b><span>Tel Aviv University</span><span class="yr">2002-2006</span></div>
+    </section>
+
+    <section>
+      <h2>Media coverage</h2>
+      <p>Work featured in Wall Street Journal, Wired, TechRadar, Rhizome and The Atlantic.</p>
+    </section>
+
+    <section>
+      <h2>Currently</h2>
+      <p>Writing <i>Design for Failure</i>, a book on why the most resilient products are built by teams that take error seriously from day one.</p>
+    </section>
+
+    <section>
+      <h2>Interests</h2>
+      <p>Keen road cyclist, runner and yogi.</p>
+    </section>
+  </aside>
+</div>
+
+</body>
+</html>
