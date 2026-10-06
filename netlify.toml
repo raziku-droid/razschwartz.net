@@ -9,3 +9,9 @@
   to = "/404"
   status = 404
   force = true
+
+[[redirects]]
+  from = "/cv/*"
+  to = "/404"
+  status = 404
+  force = true
