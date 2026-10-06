@@ -9,7 +9,7 @@ Personal site of Raz Schwartz. Plain HTML, no build step, hosted on Netlify.
 | `index.html` | The whole site: content, styles, and layout |
 | `Raz_Schwartz_CV.pdf` | CV linked from the site; replace the file to update it |
 | `me.jpeg` | Profile photo |
-| `lossless.jpg`, `wrapped.jpg`, `oculusgo.jpg`, `return2.png` | Work section images |
+| `lossless.jpg`, `wrapped.jpg`, `oculusgo.jpg`, `return2.jpg` | Work section images |
 | `favicon.ico` | Browser tab icon |
 | `netlify.toml` | Netlify settings (no build step, publish the repo root) |
 
