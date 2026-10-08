@@ -7,12 +7,47 @@
   <meta name="description" content="Product Design &amp; Research Leader. Former Spotify, Meta/Oculus, Welltech. Open to VP and Senior Design Director roles.">
   <meta property="og:title" content="Raz Schwartz - Product Design &amp; Research Leader">
   <meta property="og:description" content="Product Design &amp; Research Leader. Former Spotify, Meta/Oculus, Welltech. Open to VP and Senior Design Director roles.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://razschwartz.net">
-  <meta property="og:image" content="https://razschwartz.net/me.jpeg">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://razschwartz.net/">
+  <meta property="og:site_name" content="Raz Schwartz">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:image" content="https://razschwartz.net/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Raz Schwartz, Product Design &amp; Research Leader">
+  <meta property="profile:first_name" content="Raz">
+  <meta property="profile:last_name" content="Schwartz">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Raz Schwartz - Product Design &amp; Research Leader">
+  <meta name="twitter:description" content="Product Design &amp; Research Leader. Former Spotify, Meta/Oculus, Welltech.">
+  <meta name="twitter:image" content="https://razschwartz.net/og-image.jpg">
+  <meta name="author" content="Raz Schwartz">
   <meta name="color-scheme" content="light dark">
-  <link rel="canonical" href="https://razschwartz.net">
+  <meta name="theme-color" content="#f6f6f8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#111116" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://razschwartz.net/">
   <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Raz Schwartz",
+    "url": "https://razschwartz.net/",
+    "image": "https://razschwartz.net/me.jpeg",
+    "jobTitle": "Product Design & Research Leader",
+    "description": "Product design and research leader. Former Spotify, Meta/Oculus and Welltech.",
+    "email": "mailto:raz@razschwartz.net",
+    "address": { "@type": "PostalAddress", "addressLocality": "London", "addressCountry": "GB" },
+    "sameAs": ["https://www.linkedin.com/in/raz-schwartz"],
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "Carnegie Mellon University" },
+      { "@type": "CollegeOrUniversity", "name": "Cornell Tech" },
+      { "@type": "CollegeOrUniversity", "name": "Tel Aviv University" }
+    ],
+    "knowsAbout": ["Product design", "UX research", "Design leadership", "Human-computer interaction", "AI product design"]
+  }
+  </script>
   <link rel="preload" href="assets/fonts/geist-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <style>
     @font-face {
@@ -101,9 +136,9 @@
     }
     .nav.scrolled { border-bottom-color: var(--line); }
     .nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; }
-    .nav-name { font-weight: 600; font-size: 15px; text-decoration: none; letter-spacing: -0.01em; }
+    .nav-name { font-weight: 600; font-size: 15px; text-decoration: none; letter-spacing: -0.01em; white-space: nowrap; padding: 12px 0; }
     .nav-links { display: flex; gap: clamp(14px, 3vw, 40px); list-style: none; }
-    .nav-links a { font-size: 14px; color: var(--ink-2); text-decoration: none; }
+    .nav-links a { display: inline-block; padding: 12px 0; font-size: 14px; color: var(--ink-2); text-decoration: none; }
     .nav-links a:hover { color: var(--accent); }
 
     /* BUTTONS: all pill-shaped. Images and panels use --radius. */
@@ -258,9 +293,17 @@
     }
     @media (max-width: 520px) {
       .nav-name { font-size: 14px; }
+      .nav-links { gap: 12px; }
       .nav-links a { font-size: 13px; }
       .tl-row { grid-template-columns: 1fr; gap: 2px; }
       footer .wrap { flex-direction: column; }
+    }
+    @media (max-width: 380px) {
+      :root { --gutter: 16px; }
+      .nav .wrap { gap: 12px; }
+      .nav-name { font-size: 13px; }
+      .nav-links { gap: 10px; }
+      .nav-links a { font-size: 12.5px; }
     }
   </style>
 </head>
@@ -306,7 +349,7 @@
         <!-- Welltech -->
         <article class="case case-featured">
           <div class="case-img">
-            <img src="return2.jpg" alt="Welltech's Return AI app shown on four phones" width="1920" height="1153" loading="lazy">
+            <img src="return2.jpg" alt="Welltech's Return AI app shown on four phones" width="1600" height="961" loading="lazy">
           </div>
           <div>
             <p class="case-meta"><strong>Welltech</strong><span>Design leadership, business impact</span></p>
@@ -337,7 +380,7 @@
         <div class="case-pair">
           <article class="case">
             <div class="case-img">
-              <img src="wrapped.jpg" alt="Spotify Wrapped" width="1920" height="1080" loading="lazy">
+              <img src="wrapped.jpg" alt="Spotify Wrapped" width="1600" height="900" loading="lazy">
             </div>
             <p class="case-meta"><span>Subscription growth, cultural impact</span></p>
             <h3>Spotify Wrapped</h3>
@@ -349,7 +392,7 @@
 
           <article class="case">
             <div class="case-img">
-              <img src="lossless.jpg" alt="Spotify Lossless" width="1920" height="1080" loading="lazy">
+              <img src="lossless.jpg" alt="Spotify Lossless" width="1600" height="900" loading="lazy">
             </div>
             <p class="case-meta"><span>0→1 product, cross-company strategy</span></p>
             <h3>Lossless audio streaming</h3>
@@ -364,7 +407,7 @@
         <!-- Oculus -->
         <article class="case case-split">
           <div class="case-img">
-            <img src="oculusgo.jpg" alt="Oculus Go headset" width="1920" height="1000" loading="lazy">
+            <img src="oculusgo.jpg" alt="Oculus Go headset" width="1600" height="833" loading="lazy">
           </div>
           <div>
             <p class="case-meta"><strong>Meta / Oculus</strong><span>AR/VR, 0→1</span></p>
